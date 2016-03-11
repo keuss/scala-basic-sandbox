@@ -96,4 +96,19 @@ object TestOption extends App {
   val listOfOptions = List(None, None, None)
   println(listOfOptions.flatten.isEmpty)
   
+  println("-----test for 3 -----")
+  val valueTuple = (Some("a"), Some("b"), Seq(1, 2, 3))
+  
+  println(s"valueTuple:$valueTuple")
+  
+  val res = valueTuple match {
+    case (Some(a), Some(b), Seq()) => s"Some all : $a, $b"
+    case (Some(a), _, _) => s"Some a : $a"
+    case (_, Some(b), _) => s"Some b : $b"
+    case (_, _, seq) => s"Some seq : $seq"
+    case _ => "Should not happen"
+  }
+  
+  println(s"res:$res")
+  
 }
