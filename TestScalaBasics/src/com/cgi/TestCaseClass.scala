@@ -28,5 +28,10 @@ object TestCaseClass extends App {
   // unapply (extractors)
   // http://danielwestheide.com/blog/2012/11/21/the-neophytes-guide-to-scala-part-1-extractors.html
   println(s"unapply:${(User.unapply(User(2, "Johanna", "Doe", 30, Some("meuf"))))}")
-      
+  
+  // examples from : http://www.alessandrolacava.com/blog/scala-case-classes-in-depth/
+  case class Person(lastname: String, firstname: String, birthYear: Int)
+  val p = Person("Lacava", "Alessandro", 1976)
+  val lastname: Any = p.productElement(0) // Lacava
+  println(s"lastname : $lastname")
 }
