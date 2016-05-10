@@ -30,10 +30,12 @@ object ShapelessTest extends App {
   val t3 = (23, "foo") ++ (true, 2.0)
   val t4 = (23, "foo", true).toList
   val t5 = (User.apply _) tupled ((2, "Johanna", "Doe") ++ tup.drop(3))
+  val chunks = tup.drop(2)._1
   
   println(t1)
   println(t2)
   println(t3)
   println(t4)
   println(t5)
+  println(chunks)
 }

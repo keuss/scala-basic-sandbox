@@ -15,7 +15,7 @@ object TestCaseClass extends App {
 
   // apply and tupled
   val u = (User.apply _) (2, "Johanna", "Doe", 30, Some("meuf"))
-  // follow this method with `_' if you want to treat it as a partially applied function
+  // follow this method with _ if you want to treat it as a partially applied function
   println(s"u apply:${(User.apply _)}")
   println(s"u:${u}")
   println(s"u apply bis:${User.apply(2, "Johanna", "Doe", 30, Some("meuf"))}")
