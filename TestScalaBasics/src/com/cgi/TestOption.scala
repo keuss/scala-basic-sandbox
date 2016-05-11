@@ -60,6 +60,8 @@ object TestOption extends App {
   // <=>
   println(proj1.client.flatMap(c => c.dirigeant).flatMap(d => d.email))
   
+  println(c1.dirigeant.flatMap(_.email.map(_.toUpperCase)).getOrElse(""))
+  
   println("-----test getOrElse avec 'User' -----")
   val userBis: Option[User] = Some(User(2, "Johanna", "Doe", 30, Some("meuf")))
   val userBis2: Option[User] = None
