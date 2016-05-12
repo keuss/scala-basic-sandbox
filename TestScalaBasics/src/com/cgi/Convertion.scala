@@ -12,4 +12,7 @@ object Convertion extends App {
   println(z)
   println(BigInt("000000000"))
   
+  val a = BigInt(123456789)
+  val b = BigInt(987654)
+  println(a.toString + b.toString)
 }
