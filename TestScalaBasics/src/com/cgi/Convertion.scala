@@ -15,4 +15,11 @@ object Convertion extends App {
   val a = BigInt(123456789)
   val b = BigInt(987654)
   println(a.toString + b.toString)
+  
+  // Doubles, and Precision
+  val d1: Double = 1003.0
+  val d2 = BigDecimal(d1).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
+  println(d2)
+  println(Math.round(d1*100.0)/100.0)
+  println(d1 - (d1 % 0.01))  
 }
